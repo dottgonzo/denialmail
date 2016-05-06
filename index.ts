@@ -48,7 +48,7 @@ export = class DenialMail {
                 if (error) {
                     reject(error);
                 } else {
-                    resolve(info.response)
+                    resolve(info);
                 }
 
                 
