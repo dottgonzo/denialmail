@@ -31,7 +31,7 @@ export = class DenialMail {
     }
 
     send() {
-        return new Promise<boolean>(function(resolve, reject) {
+        return new Promise(function(resolve, reject) {
 
 
             let mailOptions: Imail = {
@@ -48,9 +48,10 @@ export = class DenialMail {
                 if (error) {
                     reject(error);
                 } else {
-                    resolve(true)
+                    resolve(info.response)
                 }
-                console.log('Message sent: ' + info.response);
+
+                
             });
 
         })
