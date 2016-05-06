@@ -1,6 +1,6 @@
 {
   "name": "denialmail",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mail notify",
   "main": "index.js",
   "scripts": {
