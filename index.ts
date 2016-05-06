@@ -30,15 +30,19 @@ export = class DenialMail {
         this.transporter = Nodemailer.createTransport("smtps://" + from.split("@")[0] + "%40gmail.com:" + password + "@smtp.gmail.com");
     }
 
-    send(text: string) {
+    send(text: string,subject?:string) {
         return new Promise(function(resolve, reject) {
 
             let html = text
 
+let subj=subject;
+
+
+
             let mailOptions: Imail = {
                 from: '"' + this.name + '" <' + this.from + '>', // sender address 
                 to: this.to, // list of receivers 
-                subject: "subject", // Subject line 
+                subject: subj, // Subject line 
                 text: html, // plaintext body 
                 html: html // html body 
             };
